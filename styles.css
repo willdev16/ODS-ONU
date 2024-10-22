@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body h1{
+    font-family: "Raleway";
+}
+
 html, body{
     scroll-behavior: smooth;
 }
@@ -110,6 +114,8 @@ nav h1{
     
 }
 
+
+
 .card {
     background-color: #181b23;
     padding: 20px;
@@ -200,7 +206,7 @@ main h1{
 }
 
 .card #card-title{
-    font-weight: 200;
+    font-weight: 350;
     font-size: 1.2rem;
     color: white;
 }
@@ -299,7 +305,7 @@ footer a {
         text-align: left;
         font-size: 1rem;
         margin-top: 5vh;
-        margin-left: 3vh;
+        margin-left: 2.8vh;
     }
 
     .banner{
