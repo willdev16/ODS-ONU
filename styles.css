@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #121212;
+    font-family: "Poppins";
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav{
+    width: 100%;
+    height: 8dvh;
+    animation: cor infinite 10s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.212);
+    position: fixed;
+    z-index: 100;
+}
+
+nav ul{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 5dvh;
+    list-style: none;
+}
+
+
+nav ul li{
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+
+
+nav ul li:hover{
+    transform: scale(1.4)
+}
+
+nav h1{
+    font-size: 1.2rem;
+    margin-left: 4dvh;
+    color: white;
+}
+
+@keyframes cor {
+    0% { background-color: #4287db; }
+    50% { background-color: #94b2e9; }
+    100% { background-color: #4287db; }
+}
+
+
+
+
+.info-main{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    
+    backdrop-filter: blur(20px);
+
+    padding: 2%;
+
+    display: flex;
+    justify-content: center;
+
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.578);
+
+}
+
+.info-main p{
+    color: white;
+    font-weight: 300;
+    
+    font-size: 1.2rem;
+
+    width: 50%;
+}
+
+.rotateX{
+    display: inline-block;
+    transform: rotate(90deg);
+    transform-origin: center;
+    z-index: 5;
+    
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    
+}
+
+.card {
+    background-color: #181b23;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 20vh;
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #666;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.dropbtn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-family: "Poppins";
+    
+}
+
+.dropbtn:hover {
+    background-color: #0056b3;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    max-height: 150px;
+    overflow-y: auto;  
+    width: 100%;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+main h1{
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+    font-size: 1.7rem;
+    color: #fff;
+    text-align: center;
+}
+
+.card h1 {
+    color: #007bff;
+}
+
+.card #card-title{
+    font-weight: 200;
+    font-size: 1.2rem;
+    color: white;
+}
+
+#card-description{
+    text-align: left;
+}
+
+.banner{
+    width: 100%;
+    position: relative;
+}
+
+.banner img {
+    width: 100%; /* Faz a imagem cobrir 100% da largura */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaços indesejados abaixo da imagem */
+  }
+
+footer{
+    width: 100%;
+    height: 15vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+footer h4{
+    color: #fff;
+}
+
+footer a {
+    color: #666;
+    text-decoration: none;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 1024px) {
+    .rotateX{
+        display: none;
+    }
+
+    .info-main p{
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    nav h1{
+        font-size: 1rem;
+    }
+
+    main h1{
+        font-size: 1.2rem;
+    }
+
+    .rotateX{
+        top: 40%;
+    }
+
+    nav{
+        justify-content: center;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    .info-main{
+        top: 60%;
+        
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .info-main p{
+        font-size: 0.9rem;
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .card{
+        width: 100%;
+    }
+
+    main h1{
+        text-align: left;
+        font-size: 1rem;
+        margin-top: 5vh;
+        margin-left: 3vh;
+    }
+
+    .banner{
+        margin-top: 7vh;
+        margin-bottom: 7vh;
+    }
+
+}
